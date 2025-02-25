@@ -1,4 +1,8 @@
-// creation de phrases aleatoirs
+// création de phrases aleatoirs
+// au click une phrase aléatoir doit apparaitre
+// tu a sujet verbe et complement
+let displayResult = document.querySelector(".result");
+let numbersDifferents = document.querySelector(".number");
 const button = document.querySelector("button");
 let eRandom = document.querySelector(".eRandom");
 
@@ -39,6 +43,11 @@ function addWordRandom() {
   }
 }
 // choisire le bon nombre
+// tu a un prompte qui apparais tu a 7 chance pour trouver le bon numero
+numbersDifferents.addEventListener("change", (event)=>{
+  displayResult.textContent = 
+})
+
 function numberRandom(max) {
   return Math.floor(Math.random() * (max + 1));
 }
@@ -50,7 +59,7 @@ function iisOkay(n) {
 }
 // faire en sorte en cas de une mauvaise saisie
 function Gess() {
-  const number = prompt("entre un numero") * 1;
+  const number = prompt("entre un numero Entre 1 et 7 (tu a 7 chances))") * 1;
   if (isNaN(number) || number < 0 || number > 7) {
     console.log("Entre un nombre valide !");
     return false;
@@ -75,4 +84,4 @@ for (let i = 0; i < 7; i++) {
   }
 }
 
-//pr
+//projet 3 : Gestionnaire de produits
